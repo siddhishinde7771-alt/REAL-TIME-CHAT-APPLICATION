@@ -1,0 +1,49 @@
+* {
+  font-family: 'DM Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+.chat-container {
+  background: linear-gradient(135deg,#1c1507c3,#171511,#272724);
+}
+
+.logo-bg {
+  background: linear-gradient(135deg,#56af0d,#04632a);
+}
+
+.send-btn {
+  background: linear-gradient(135deg,#9e1b91,#c03bb3);
+  transition: 0.2s;
+}
+
+.send-btn:hover {
+  transform: scale(1.05);
+}
+
+.message-bubble {
+  animation: slideIn 0.3s ease;
+}
+
+@keyframes slideIn {
+  from { opacity:0; transform:translateY(10px); }
+  to { opacity:1; transform:translateY(0); }
+}
+
+.scrollbar-thin::-webkit-scrollbar {
+  width:6px;
+}
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  background:rgba(255,255,255,0.2);
+  border-radius:3px;
+}
+
+.color-circle {
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  cursor:pointer;
+  border:2px solid transparent;
+}
+.color-circle.selected {
+  border:2px solid white;
+}
