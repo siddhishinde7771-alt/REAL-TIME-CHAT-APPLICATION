@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EduLearn - Online Learning Platform</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+<nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-6 flex justify-between items-center h-16">
+        <div onclick="showPage('home')" class="cursor-pointer text-2xl font-bold text-purple-600">
+            EduLearn
+        </div>
+        <div class="flex gap-8 font-medium">
+            <button onclick="showPage('home')">Home</button>
+            <button onclick="showPage('courses')">Courses</button>
+            <button onclick="showPage('learning')">My Learning</button>
+        </div>
+    </div>
+</nav>
+
+<!-- HOME -->
+<div id="home" class="page p-10">
+    <div class="hero">
+        <div class="hero-content">
+            <h1 class="text-5xl font-bold mb-4">Master New Skills Online</h1>
+            <p class="text-gray-700 mb-6">Learn from industry experts and grow your career with practical skills.</p>
+            <button onclick="showPage('courses')" class="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700">
+                Explore Courses
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- COURSES -->
+<div id="courses" class="page hidden p-10">
+  <h1 class="text-4xl font-bold mb-6 text-center">All Courses</h1>
+
+  <div class="grid md:grid-cols-3 gap-8">
+
+    <!-- Frontend Development -->
+    <div class="bg-white shadow-lg rounded-xl p-6 hover:scale-105 transition duration-300">
+      <h2 class="text-2xl font-semibold mb-2">Frontend Development</h2>
+      <p class="text-gray-600 mb-3">Learn how to build responsive and interactive websites using modern frontend technologies.</p>
+      <ul class="text-sm text-gray-700 mb-4 list-disc ml-5">
+        <li>HTML5 & CSS3</li>
+        <li>JavaScript (ES6+)</li>
+        <li>React.js</li>
+        <li>Responsive Design</li>
+      </ul>
+      <p class="font-semibold text-blue-600">Duration: 3 Months</p>
+      <button onclick="enrollCourse('Frontend Development')" class="mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Enroll Now</button>
+    </div>
+
+    <!-- Backend Development -->
+    <div class="bg-white shadow-lg rounded-xl p-6 hover:scale-105 transition duration-300">
+      <h2 class="text-2xl font-semibold mb-2">Backend Development</h2>
+      <p class="text-gray-600 mb-3">Master server-side programming, databases, and APIs.</p>
+      <ul class="text-sm text-gray-700 mb-4 list-disc ml-5">
+        <li>Node.js & Express.js</li>
+        <li>MongoDB / MySQL</li>
+        <li>REST APIs</li>
+        <li>Authentication & Security</li>
+      </ul>
+      <p class="font-semibold text-green-600">Duration: 4 Months</p>
+      <button onclick="enrollCourse('Backend Development')" class="mt-4 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700">Enroll Now</button>
+    </div>
+
+    <!-- Full Stack Development -->
+    <div class="bg-white shadow-lg rounded-xl p-6 hover:scale-105 transition duration-300">
+      <h2 class="text-2xl font-semibold mb-2">Full Stack Development</h2>
+      <p class="text-gray-600 mb-3">Learn both frontend and backend to become a complete developer.</p>
+      <ul class="text-sm text-gray-700 mb-4 list-disc ml-5">
+        <li>MERN Stack</li>
+        <li>Database Integration</li>
+        <li>Deployment</li>
+        <li>Real Projects</li>
+      </ul>
+      <p class="font-semibold text-purple-600">Duration: 6 Months</p>
+      <button onclick="enrollCourse('Full Stack Development')" class="mt-4 bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700">Enroll Now</button>
+    </div>
+
+    <!-- UI/UX Design -->
+    <div class="bg-white shadow-lg rounded-xl p-6 hover:scale-105 transition duration-300">
+      <h2 class="text-2xl font-semibold mb-2">UI/UX Design</h2>
+      <p class="text-gray-600 mb-3">Design modern and user-friendly interfaces.</p>
+      <ul class="text-sm text-gray-700 mb-4 list-disc ml-5">
+        <li>Figma</li>
+        <li>Wireframing</li>
+        <li>Prototyping</li>
+        <li>User Research</li>
+      </ul>
+      <p class="font-semibold text-pink-600">Duration: 2 Months</p>
+      <button onclick="enrollCourse('UI/UX Design')" class="mt-4 bg-pink-600 text-white px-4 py-2 rounded-lg hover:bg-pink-700">Enroll Now</button>
+    </div>
+
+    <!-- DSA -->
+    <div class="bg-white shadow-lg rounded-xl p-6 hover:scale-105 transition duration-300">
+      <h2 class="text-2xl font-semibold mb-2">Data Structures & Algorithms</h2>
+      <p class="text-gray-600 mb-3">Improve problem-solving and crack coding interviews.</p>
+      <ul class="text-sm text-gray-700 mb-4 list-disc ml-5">
+        <li>Arrays</li>
+        <li>Stacks & Queues</li>
+        <li>Trees & Graphs</li>
+        <li>Sorting</li>
+      </ul>
+      <p class="font-semibold text-red-600">Duration: 3 Months</p>
+      <button onclick="enrollCourse('Data Structures & Algorithms')" class="mt-4 bg-red-600 text-white px-4 py-2 rounded-lg hover:bg-red-700">Enroll Now</button>
+    </div>
+
+    <!-- Python -->
+    <div class="bg-white shadow-lg rounded-xl p-6 hover:scale-105 transition duration-300">
+      <h2 class="text-2xl font-semibold mb-2">Python Programming</h2>
+      <p class="text-gray-600 mb-3">Learn Python for web development and automation.</p>
+      <ul class="text-sm text-gray-700 mb-4 list-disc ml-5">
+        <li>Basics</li>
+        <li>OOP</li>
+        <li>File Handling</li>
+        <li>Projects</li>
+      </ul>
+      <p class="font-semibold text-yellow-600">Duration: 2.5 Months</p>
+      <button onclick="enrollCourse('Python Programming')" class="mt-4 bg-yellow-500 text-white px-4 py-2 rounded-lg hover:bg-yellow-600">Enroll Now</button>
+    </div>
+
+  </div>
+</div>
+
+<!-- LEARNING -->
+<div id="learning" class="page hidden p-10">
+    <h1 class="text-4xl font-bold mb-6">My Learning</h1>
+    <div id="enrolled-courses"></div>
+</div>
+
+<!-- External JS -->
+<script src="script.js"></script>
+
+</body>
+</html>
