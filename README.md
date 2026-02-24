@@ -21,3 +21,6 @@ Editor/IDE: Visual Studio Code
 Browser for Testing: Google Chrome
 Optional Deployment Platform: GitHub Pages or Netlify
 This project is built only using front-end technologies without a backend server. 
+
+OUTPUT:
+<img width="1920" height="911" alt="Image" src="https://github.com/user-attachments/assets/591f33ec-be40-4ac6-bacb-c2949067a599" />
